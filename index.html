@@ -95,6 +95,19 @@
             padding: 150px 0 100px;
             background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
             text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin: 0 auto 30px;
+            display: block;
         }
 
         .hero h1 {
@@ -114,6 +127,13 @@
             max-width: 700px;
             margin: 0 auto 40px;
             color: var(--text-light);
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
         }
 
         .btn {
@@ -138,12 +158,19 @@
             background: transparent;
             border: 2px solid var(--primary-color);
             color: var(--primary-color);
-            margin-left: 15px;
         }
 
         .btn-outline:hover {
             background: var(--primary-color);
             color: white;
+        }
+
+        .btn-resume {
+            background: var(--accent-color);
+        }
+
+        .btn-resume:hover {
+            background: #c0392b;
         }
 
         /* About Section */
@@ -182,9 +209,23 @@
             flex-wrap: wrap;
         }
 
+        .about-image {
+            flex: 1;
+            text-align: center;
+            padding-right: 40px;
+            min-width: 300px;
+        }
+
+        .about-image img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
         .about-text {
             flex: 1;
-            padding-right: 40px;
+            min-width: 300px;
         }
 
         .about-text h3 {
@@ -199,7 +240,7 @@
         }
 
         .skills {
-            flex: 1;
+            margin-top: 40px;
         }
 
         .skill-item {
@@ -610,7 +651,7 @@
                 flex-direction: column;
             }
 
-            .about-text {
+            .about-image {
                 padding-right: 0;
                 margin-bottom: 40px;
             }
@@ -672,12 +713,16 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="container">
+            <img src="me.jpg" alt="Sohith Jagannadh" class="profile-image">
             <h1>M. Sohith Jagannadh</h1>
             <h2>Computer Science Engineer & Frontend Developer</h2>
             <p>Dynamic and results-driven Computer Science Engineering graduate with a strong background in technology and a genuine interest in sales and business development. Skilled in web technologies, customer relationship management (CRM), and data analysis.</p>
             <div class="hero-buttons">
                 <a href="#contact" class="btn">Get In Touch</a>
                 <a href="#projects" class="btn btn-outline">View My Work</a>
+                <a href="resume.docx" download class="btn btn-resume">
+                    <i class="fas fa-download"></i> Download Resume
+                </a>
             </div>
         </div>
     </section>
@@ -689,48 +734,52 @@
                 <h2>About Me</h2>
             </div>
             <div class="about-content">
+                <div class="about-image">
+                    <img src="me1.jpg" alt="Sohith Jagannadh working">
+                </div>
                 <div class="about-text">
                     <h3>Who Am I?</h3>
                     <p>I'm a Computer Science Engineering graduate from Vignan Institute of Information Technology with a passion for technology and business development. I have hands-on experience in frontend development and creating innovative solutions.</p>
                     <p>I show a strong ability to understand customer needs, examine market trends, and help create effective business strategies. I'm capable of using technical knowledge to support sales efforts and improve the customer experience.</p>
                     <p>I'm dedicated to driving growth through innovative, customer-focused solutions that bridge the gap between technology and business needs.</p>
-                </div>
-                <div class="skills">
-                    <h3>My Skills</h3>
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>HTML/CSS/JavaScript</span>
-                            <span>90%</span>
+                    
+                    <div class="skills">
+                        <h3>My Skills</h3>
+                        <div class="skill-item">
+                            <div class="skill-name">
+                                <span>HTML/CSS/JavaScript</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%;"></div>
+                            </div>
                         </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 90%;"></div>
+                        <div class="skill-item">
+                            <div class="skill-name">
+                                <span>C/C++ Programming</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%;"></div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>C/C++ Programming</span>
-                            <span>85%</span>
+                        <div class="skill-item">
+                            <div class="skill-name">
+                                <span>Python</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%;"></div>
+                            </div>
                         </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 85%;"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>Python</span>
-                            <span>80%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 80%;"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>Data Analysis</span>
-                            <span>75%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 75%;"></div>
+                        <div class="skill-item">
+                            <div class="skill-name">
+                                <span>Data Analysis</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%;"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -894,7 +943,7 @@
                             </div>
                             <div>
                                 <h4>Email</h4>
-                                <p>sohith.jagannadh@example.com</p>
+                                <p>sohith12254@gmail.com</p>
                             </div>
                         </div>
                         <div class="contact-item">
@@ -903,15 +952,13 @@
                             </div>
                             <div>
                                 <h4>Location</h4>
-                                <p>Hyderabad, India</p>
+                                <p>Gajuwaka, Visakhapatnam</p>
                             </div>
                         </div>
                     </div>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-github"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/sohith-jagannadh/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/Sohith12254" target="_blank"><i class="fab fa-github"></i></a>
                     </div>
                 </div>
                 <div class="contact-form">
@@ -939,10 +986,8 @@
     <footer>
         <div class="container">
             <div class="social-links">
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#"><i class="fab fa-github"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/sohith-jagannadh/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/Sohith12254" target="_blank"><i class="fab fa-github"></i></a>
             </div>
             <p class="copyright">&copy; 2024 M. Sohith Jagannadh. All Rights Reserved.</p>
         </div>
