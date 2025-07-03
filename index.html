@@ -106,28 +106,26 @@
 
         /* Hero Section */
         .hero {
-            padding: 150px 0 100px;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 200px 0 150px;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
             text-align: center;
             position: relative;
             overflow: hidden;
+            color: white;
         }
 
-        .profile-image {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 5px solid white;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            margin: 0 auto 30px;
-            display: block;
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
         }
 
         .hero h1 {
             font-size: 48px;
             margin-bottom: 20px;
-            color: var(--dark-color);
+            color: white;
         }
 
         .hero h2 {
@@ -140,7 +138,7 @@
         .hero p {
             max-width: 700px;
             margin: 0 auto 40px;
-            color: var(--text-light);
+            color: rgba(255, 255, 255, 0.9);
         }
 
         .hero-buttons {
@@ -717,6 +715,10 @@
                 display: block;
             }
 
+            .hero {
+                padding: 150px 0 100px;
+            }
+
             .hero h1 {
                 font-size: 36px;
             }
@@ -794,16 +796,17 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="container">
-            <img src="me.jpg" alt="Sohith Jagannadh" class="profile-image">
-            <h1>M. Sohith Jagannadh</h1>
-            <h2>Computer Science Engineer & Frontend Developer</h2>
-            <p>Dynamic and results-driven Computer Science Engineering graduate with a strong background in technology and a genuine interest in sales and business development. Skilled in web technologies, customer relationship management (CRM), and data analysis.</p>
-            <div class="hero-buttons">
-                <a href="#contact" class="btn">Get In Touch</a>
-                <a href="#projects" class="btn btn-outline">View My Work</a>
-                <a href="resume.docx" download class="btn btn-resume">
-                    <i class="fas fa-download"></i> Download Resume
-                </a>
+            <div class="hero-content">
+                <h1>M. Sohith Jagannadh</h1>
+                <h2>Computer Science Engineer & Python Developer</h2>
+                <p>Dynamic and results-driven Computer Science Engineering graduate with expertise in Python development and a strong interest in building scalable applications. Skilled in web technologies, data analysis, and backend development.</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn">Get In Touch</a>
+                    <a href="#projects" class="btn btn-outline">View My Work</a>
+                    <a href="resume.docx" download class="btn btn-resume">
+                        <i class="fas fa-download"></i> Download Resume
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -820,15 +823,15 @@
                 </div>
                 <div class="about-text">
                     <h3>Who Am I?</h3>
-                    <p>I'm a Computer Science Engineering graduate from Vignan Institute of Information Technology with a passion for technology and business development. I have hands-on experience in frontend development and creating innovative solutions.</p>
-                    <p>I show a strong ability to understand customer needs, examine market trends, and help create effective business strategies. I'm capable of using technical knowledge to support sales efforts and improve the customer experience.</p>
-                    <p>I'm dedicated to driving growth through innovative, customer-focused solutions that bridge the gap between technology and business needs.</p>
+                    <p>I'm a Computer Science Engineering graduate from Vignan Institute of Information Technology with a passion for Python development and building robust backend systems. I have hands-on experience in full-stack development and creating innovative solutions.</p>
+                    <p>I specialize in Python programming with expertise in frameworks like Django and Flask. My technical skills are complemented by strong problem-solving abilities and a keen eye for detail in software architecture and design.</p>
+                    <p>I'm dedicated to writing clean, efficient code and building scalable applications that solve real-world problems while maintaining high performance and security standards.</p>
                     
                     <div class="skills">
                         <h3>My Skills</h3>
                         <div class="skill-item">
                             <div class="skill-name">
-                                <span>HTML/CSS/JavaScript</span>
+                                <span>Python</span>
                                 <span>90%</span>
                             </div>
                             <div class="skill-bar">
@@ -837,7 +840,7 @@
                         </div>
                         <div class="skill-item">
                             <div class="skill-name">
-                                <span>C/C++ Programming</span>
+                                <span>Django/Flask</span>
                                 <span>85%</span>
                             </div>
                             <div class="skill-bar">
@@ -846,7 +849,7 @@
                         </div>
                         <div class="skill-item">
                             <div class="skill-name">
-                                <span>Python</span>
+                                <span>HTML/CSS/JavaScript</span>
                                 <span>80%</span>
                             </div>
                             <div class="skill-bar">
@@ -878,7 +881,7 @@
                 <div class="timeline-item">
                     <div class="timeline-content">
                         <div class="timeline-date">May 2025 - July 2025</div>
-                        <h3 class="timeline-title">Web Development Intern</h3>
+                        <h3 class="timeline-title">Python Intern</h3>
                         <h4>Miracle Software Systems, Vizag</h4>
                         <p class="timeline-text">
                             • Completed intensive 45-day internship focusing on modern web technologies<br>
@@ -891,12 +894,14 @@
                 <div class="timeline-item">
                     <div class="timeline-content">
                         <div class="timeline-date">2023 - Present</div>
-                        <h3 class="timeline-title">Frontend Developer Intern</h3>
+                        <h3 class="timeline-title">Python Developer Intern</h3>
                         <h4>Cognifyz Technologies</h4>
                         <p class="timeline-text">
-                            • Worked as a Frontend Developer intern, contributing to the design and development of user friendly and responsive web interfaces.<br>
-                            • Gained hands-on experience with HTML, CSS, JavaScript, and frontend frameworks.<br>
-                            • Participated in daily stand-ups and contributed to project planning using agile methodologies.
+                            • Developed backend services using Python and Django framework<br>
+                            • Implemented RESTful APIs for web applications<br>
+                            • Optimized database queries and improved application performance<br>
+                            • Collaborated with frontend developers to integrate user-facing elements<br>
+                            • Participated in daily stand-ups and contributed to project planning using agile methodologies
                         </p>
                     </div>
                 </div>
@@ -995,7 +1000,7 @@
                         <i class="fas fa-certificate"></i>
                     </div>
                     <div class="certification-info">
-                        <h3>Front end Development Certification</h3>
+                        <h3>Python Developer Internship</h3>
                         <p>Cognifyz technologies | April 2025</p>
                         <button class="btn-view-cert" onclick="openCertModal('cert1.jpg')">
                             View Certificate
@@ -1023,7 +1028,7 @@
                         <i class="fas fa-certificate"></i>
                     </div>
                     <div class="certification-info">
-                        <h3>Introduction to JavaScript</h3>
+                        <h3>Web Development Certification</h3>
                         <p>Great Learning | June 2023</p>
                         <button class="btn-view-cert" onclick="openCertModal('cert3.png')">
                             View Certificate
@@ -1050,7 +1055,7 @@
             <div class="contact-content">
                 <div class="contact-info">
                     <h3>Let's Connect</h3>
-                    <p>I'm currently looking for new opportunities in frontend development or business development roles. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
+                    <p>I'm currently looking for new opportunities in Python development or full-stack roles. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
                     <div class="contact-details">
                         <div class="contact-item">
                             <div class="contact-icon">
